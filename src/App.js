@@ -15,7 +15,7 @@ function App() {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="home">Time to breathe</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="signup">Signup</Nav.Link>
             <Nav.Link href="login">Login</Nav.Link>
           </Nav>
