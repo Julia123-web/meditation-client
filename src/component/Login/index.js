@@ -15,7 +15,7 @@ class LoginContainer extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log("----LOGIN STATE----", this.state);
+    console.log("----ITS EMPTY?----", this.state);
     this.props.dispatch(login(this.state.email, this.state.password));
     this.props.history.push("/videos");
     this.setState({ email: "", password: "" });

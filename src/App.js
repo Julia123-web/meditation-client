@@ -7,6 +7,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import Login from "./component/Login/index";
 import SignUp from "./component/Singup/index";
 import Home from "./component/Home/index";
+import Videos from "./component/Videos/index";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/videos" component={Videos} />
       </Router>
     </div>
   );

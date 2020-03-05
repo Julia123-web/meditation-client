@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         need is a willingness to give just a few minutes a day to learn about a
         practice that can enhance your life forever (yes, forever!)
       </p>
+      <Link to={`/quotes/`}>See more quotes!</Link>
     </div>
   );
 }
