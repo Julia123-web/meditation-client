@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { videosFetched } from "../../actions/videos";
 import { loadVideos } from "../../actions/videos";
+import VideoList from "./VideoList";
 import VideoForm from "../VideoForm";
 
 class videosContainer extends Component {
   state = {
     title: "",
-    video: ""
+    videos: ""
   };
+
+  componentDidMount() {
+    console.log("videos container props", this.props);
+    this.props.videosFetched();
+  }
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -15,15 +22,18 @@ class videosContainer extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log("----WHAT IS STATE????----", this.state);
-    this.props.dispatch(loadVideos(this.state.title, this.state.video));
+    console.log("videos container state", this.state);
+
+    this.props.loadVideos(this.state.title, this.state.videos);
     this.props.history.push("/videos");
-    this.setState({ title: "", video: "" });
+    this.setState({ title: "", videos: "" });
   };
 
   render() {
     return (
       <div>
+        <VideoList videos={this.props.videos} />
+
         <VideoForm
           text={"Videos"}
           values={this.state}
@@ -36,10 +46,13 @@ class videosContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  // console.log("what is state", state);
+  console.log("videos container mapStateToProps state", state);
   return {
-    users: state.users.user
+    users: state.users.user,
+    videos: state.videos
   };
 };
 
-export default connect(mapStateToProps)(videosContainer);
+export default connect(mapStateToProps, { videosFetched, loadVideos })(
+  videosContainer
+);

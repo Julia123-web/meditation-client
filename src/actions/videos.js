@@ -13,7 +13,7 @@ function fetchedVideos(videos) {
     }
   };
 }
-export const videosFetched = (dispatch, getState) => {
+export const videosFetched = () => async (dispatch, getState) => {
   axios.get(`http://localhost:4000/videos`).then(function(response) {
     console.log("OOOOOI", response);
     dispatch(fetchedVideos(response.data));
@@ -28,8 +28,10 @@ function videoLoad(video) {
     }
   };
 }
-export const loadVideos = (title, video) => {
+export const loadVideos = (title, videos) => {
   return async function(dispatch, getState) {
+    // console.log();
+
     const token = getState().users.user.token;
 
     const response = await axios({
@@ -38,7 +40,7 @@ export const loadVideos = (title, video) => {
       headers: { Authorization: `Bearer ${token}` },
       data: {
         title,
-        video
+        videos
       }
     });
     console.log("WHAT IS THAT", response);
