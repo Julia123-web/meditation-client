@@ -15,7 +15,7 @@ function fetchedVideos(videos) {
 }
 export const videosFetched = () => async (dispatch, getState) => {
   axios.get(`http://localhost:4000/videos`).then(function(response) {
-    console.log("OOOOOI", response);
+    console.log("OOOOOI", response.data);
     dispatch(fetchedVideos(response.data));
   });
 };

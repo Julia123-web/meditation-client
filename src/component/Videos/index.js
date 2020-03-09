@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { videosFetched } from "../../actions/videos";
 import { loadVideos } from "../../actions/videos";
 import VideoList from "./VideoList";
-import VideoForm from "../VideoForm";
+// import VideoForm from "../VideoForm";
 
 class videosContainer extends Component {
   state = {
@@ -16,30 +16,30 @@ class videosContainer extends Component {
     this.props.videosFetched();
   }
 
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+  // handleChange = event => {
+  //   this.setState({ [event.target.name]: event.target.value });
+  // };
 
-  handleSubmit = event => {
-    event.preventDefault();
-    console.log("videos container state", this.state);
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   console.log("VIDEOS container state", this.state);
 
-    this.props.loadVideos(this.state.title, this.state.videos);
-    this.props.history.push("/videos");
-    this.setState({ title: "", videos: "" });
-  };
+  //   this.props.loadVideos(this.state.title, this.state.videos);
+  //   this.props.history.push("/videos");
+  //   this.setState({ title: "", videos: "" });
+  // };
 
   render() {
     return (
       <div>
         <VideoList videos={this.props.videos} />
 
-        <VideoForm
+        {/* <VideoForm
           text={"Videos"}
           values={this.state}
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
-        />
+        /> */}
       </div>
     );
   }
