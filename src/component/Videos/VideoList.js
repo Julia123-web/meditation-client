@@ -6,7 +6,7 @@ export default function VideoList(props) {
   if (!props.videos) return "Loading";
 
   return (
-    <div>
+    <div className="flex-container">
       <ul>
         {/* <h2>{video.title}</h2> */}
         <br />

@@ -8,6 +8,7 @@ import Login from "./component/Login/index";
 import SignUp from "./component/Singup/index";
 import Home from "./component/Home/index";
 import Videos from "./component/Videos/index";
+import Quotes from "./component/Quotes/index";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/videos" component={Videos} />
+        <Route exact path="/quotes" component={Quotes} />
       </Router>
     </div>
   );
