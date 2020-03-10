@@ -45,9 +45,18 @@
   column-count: 2;
 }
 
+.HomeContainer {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.246),
+      rgba(255, 255, 255, 0.246)
+    ),
+    url("https://i.pinimg.com/originals/4e/ce/cf/4ececf59c00c017ae259f8ccfab67930.jpg");
+  margin-top: 0px;
+  align-content: space-around;
+}
+
 img {
-  width: 100px;
-  height: 100px;
   padding: 0;
   margin: 0;
   display: block;
@@ -56,18 +65,120 @@ img {
   margin-bottom: 30px;
 }
 
-.imgContainer {
-  display: flex;
-  flex-direction: row;
+.imgContainer img {
+  width: 100px;
+  height: 100px;
 }
 
-/* .imageApp {
-  width: 200px;
-  height: 200px;
-  padding: 0;
-  margin: 0;
+.imgContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.imageApp img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: px;
+  height: 350px;
+  padding: 0%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-} */
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 30px;
+}
+
+.quotes-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.h2home {
+  margin-top: 30%;
+  padding: 20px;
+  font-size: 40px;
+  margin-left: 50%;
+}
+
+.quotes-item {
+  background-color: rgba(218, 167, 218, 0.616);
+  min-width: 33%;
+  max-width: 33%;
+  margin-bottom: 5px;
+  height: 150px;
+  border: solid;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.quotes-style {
+  color: black;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.home-style {
+  color: black;
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.learn-style {
+  color: rgb(83, 6, 83);
+  font-style: italic;
+  font-size: 30px;
+}
+
+.text_style {
+  text-align: justify;
+  font-size: 22px;
+  padding: 20px;
+  list-style-position: inside;
+}
+
+.text_style2 {
+  background-color: #cccccc;
+  border-radius: 15px;
+}
+
+ul {
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+.video {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://www.itl.cat/pngfile/big/13-130538_pink-sunset-wallpaper-hd-pink-clouds-sunset-stock.jpg");
+}
+
+.quotes {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://www.itl.cat/pngfile/big/13-130538_pink-sunset-wallpaper-hd-pink-clouds-sunset-stock.jpg");
+}
+
+.signup {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.246),
+      rgba(255, 255, 255, 0.246)
+    ),
+    url("https://www.itl.cat/pngfile/big/13-130538_pink-sunset-wallpaper-hd-pink-clouds-sunset-stock.jpg");
+}

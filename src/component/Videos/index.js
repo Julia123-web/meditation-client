@@ -4,6 +4,7 @@ import { videosFetched } from "../../actions/videos";
 import { loadVideos } from "../../actions/videos";
 import VideoList from "./VideoList";
 // import VideoForm from "../VideoForm";
+import "../../App.css";
 
 class videosContainer extends Component {
   state = {
@@ -31,16 +32,18 @@ class videosContainer extends Component {
 
   render() {
     return (
-      <div>
-        <VideoList videos={this.props.videos} />
+      <body className="video">
+        <div>
+          <VideoList videos={this.props.videos} />
 
-        {/* <VideoForm
+          {/* <VideoForm
           text={"Videos"}
           values={this.state}
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
         /> */}
-      </div>
+        </div>
+      </body>
     );
   }
 }

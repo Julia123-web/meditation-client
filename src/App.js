@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="home">Time to breathe</Navbar.Brand>
+          <Navbar.Brand href="/">Time to breathe!</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="signup">Signup</Nav.Link>

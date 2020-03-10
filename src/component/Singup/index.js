@@ -26,10 +26,10 @@ class SingupFormContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signup">
         {this.props.userCreated ? <h1>Account created</h1> : null}
         <UserForm
-          text={"Signup"}
+          text={""}
           values={this.state}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}

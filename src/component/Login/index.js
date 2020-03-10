@@ -23,9 +23,9 @@ class LoginContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signup">
         <UserForm
-          text="Login"
+          text=""
           isLogin
           values={this.state}
           handleChange={this.handleChange}
