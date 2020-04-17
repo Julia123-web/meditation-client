@@ -8,13 +8,15 @@ function fetchedQuotes(quotes) {
   return {
     type: QUOTES_FETCHED,
     payload: {
-      quotes: quotes
-    }
+      quotes: quotes,
+    },
   };
 }
 export const quotesFetched = () => async (dispatch, getState) => {
-  axios.get(`http://localhost:4000/quotes`).then(function(response) {
-    console.log("HEEY", response.data);
-    dispatch(fetchedQuotes(response.data));
-  });
+  axios
+    .get(`https://meditation-server.herokuapp.com/`)
+    .then(function (response) {
+      console.log("HEEY", response.data);
+      dispatch(fetchedQuotes(response.data));
+    });
 };
