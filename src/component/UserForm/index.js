@@ -33,6 +33,7 @@ const UserForm = props => {
             value={props.values.email}
           />
         </Form.Group>
+        <Form.Text className="text-muted"></Form.Text>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password:</Form.Label>

@@ -7,7 +7,7 @@ const dbUrl = process.DATABASE_URL || "http://localhost:4000";
 
 function signUpSuccess() {
   return {
-    type: "USER_CREATED"
+    type: USER_CREATED
   };
 }
 

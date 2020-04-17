@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Button, Row, Col, Container, Image } from "react-bootstrap";
+import { Button, Row, Col, Container } from "react-bootstrap";
 import "../../App.css";
 
 function Home() {

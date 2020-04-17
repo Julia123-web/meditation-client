@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import UserForm from "../UserForm";
-import { connect } from "react-redux";
 import { login } from "../../actions/users";
+import { connect } from "react-redux";
 
 class LoginContainer extends Component {
   state = {

@@ -68,6 +68,9 @@ img {
 .imgContainer img {
   width: 100px;
   height: 100px;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .imgContainer {
@@ -104,6 +107,7 @@ img {
   padding: 20px;
   font-size: 40px;
   margin-left: 50%;
+  color: rgba(47, 11, 77, 0.794);
 }
 
 .quotes-item {
@@ -120,20 +124,20 @@ img {
 }
 
 .quotes-style {
-  color: black;
+  color: rgba(47, 11, 77, 0.794);
   font-style: italic;
   text-decoration: underline;
 }
 
 .home-style {
-  color: black;
+  color: rgba(47, 11, 77, 0.794);
   font-style: italic;
   text-decoration: underline;
   text-align: center;
 }
 
 .learn-style {
-  color: rgb(83, 6, 83);
+  color: rgb(26, 110, 143);
   font-style: italic;
   font-size: 30px;
 }
@@ -146,7 +150,7 @@ img {
 }
 
 .text_style2 {
-  background-color: #cccccc;
+  background-color: rgba(255, 255, 255, 0.623);
   border-radius: 15px;
 }
 
