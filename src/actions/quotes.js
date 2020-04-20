@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const QUOTES_FETCHED = "QUOTES_FETCHED";
 
-// const dbUrl = process.DATABASE_URL || "http://localhost:4000";
+const dbUrl = process.DATABASE_URL || "https://meditation-server.herokuapp.com";
 
 function fetchedQuotes(quotes) {
   return {
@@ -14,7 +14,11 @@ function fetchedQuotes(quotes) {
 }
 export const quotesFetched = () => async (dispatch, getState) => {
   axios
-    .get(`https://meditation-server.herokuapp.com/`)
+    .get(`${dbUrl}/quotes`, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
     .then(function (response) {
       console.log("HEEY", response.data);
       dispatch(fetchedQuotes(response.data));

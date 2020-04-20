@@ -3,8 +3,7 @@ import axios from "axios";
 export const USER_CREATED = "USER_CREATED";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 
-const dbUrl =
-  process.DATABASE_URL || "https://meditation-server.herokuapp.com/";
+const dbUrl = process.DATABASE_URL || "https://meditation-server.herokuapp.com";
 
 function signUpSuccess() {
   return {

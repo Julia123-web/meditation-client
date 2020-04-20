@@ -3,8 +3,7 @@ import axios from "axios";
 export const VIDEOS_FETCHED = "VIDEOS_FETCHED";
 export const VIDEO_LOAD = "VIDEO_LOAD";
 
-const dbUrl =
-  process.DATABASE_URL || "https://meditation-server.herokuapp.com/";
+const dbUrl = process.DATABASE_URL || "https://meditation-server.herokuapp.com";
 
 function fetchedVideos(videos) {
   return {
@@ -15,7 +14,7 @@ function fetchedVideos(videos) {
   };
 }
 export const videosFetched = () => async (dispatch, getState) => {
-  axios.get(`http://localhost:4000/videos`).then(function (response) {
+  axios.get(`${dbUrl}/videos`).then(function (response) {
     console.log("OOOOOI", response.data);
     dispatch(fetchedVideos(response.data));
   });
