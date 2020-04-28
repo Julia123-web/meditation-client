@@ -7,7 +7,7 @@
 3. Focus on breathing.
 4. Have the peace to make the life lighter.
 
-👉 CLick here to see the app
+👉 https://meditation-front.herokuapp.com/
 
 💻 The process:
 
